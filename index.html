@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html lang="ku" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="theme-color" content="#090611">
+  <meta name="description" content="M~A~MARAL — Words Between Two Hearts. A romantic universe of love quotes in seven languages.">
+
+  <title>M~A~MARAL | Words Between Two Hearts</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Vazirmatn:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="background-effects">
+    <div class="glow glow-one"></div>
+    <div class="glow glow-two"></div>
+    <div class="glow glow-three"></div>
+    <div id="particles"></div>
+  </div>
+
+  <header class="topbar">
+
+    <a href="#home" class="brand">
+      <div class="logo-3d" aria-label="M A logo">
+        <span class="logo-m">Ⲙ</span>
+        <span class="logo-a">Ɐ</span>
+      </div>
+
+      <div class="brand-text">
+        <strong>M~A~MARAL</strong>
+        <span>WORDS BETWEEN TWO HEARTS</span>
+      </div>
+    </a>
+
+    <button id="menuToggle" class="icon-button menu-toggle" aria-label="Open menu">
+      ☰
+    </button>
+
+    <nav id="mainNav">
+      <a href="#home" class="nav-link active">سەرەتا</a>
+      <a href="#quotes" class="nav-link">وتەکان</a>
+      <a href="#languages" class="nav-link">زمانەکان</a>
+      <a href="#poems" class="nav-link">شیعر</a>
+      <a href="#favorites" class="nav-link">دڵخوازەکان</a>
+      <a href="#about" class="nav-link">دەربارە</a>
+    </nav>
+
+    <div class="header-actions">
+      <button id="searchToggle" class="icon-button" aria-label="Search">⌕</button>
+      <button id="themeToggle" class="icon-button" aria-label="Change theme">☼</button>
+    </div>
+
+  </header>
+
+  <main>
+
+    <!-- HOME -->
+    <section id="home" class="hero section">
+
+      <div class="hero-content">
+        <div class="eyebrow">
+          <span class="live-dot"></span>
+          A UNIVERSE MADE OF FEELINGS
+          <audio controls autoplay loop>
+    <source src="IMG_2841.mp3" type="audio/mpeg">
+    وێبسایتەکەت پشتگیری ئەم فۆرماتەی دەنگ ناکات.
+</audio>
+        </div>
+
+        <h1>
+          هەندێک هەست
+          <span class="gradient-text">بە وشە ناگوترێن...</span>
+        </h1>
+
+        <p class="hero-description">
+          لە جیهانێکدا کە هەموو شتێک دەگۆڕێت،
+          هەندێک هەست هەن کە لە دڵدا دەمێننەوە.
+          وشەیەک بدۆزەوە کە بتوانێت هەستەکەت دەرببڕێت.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#quotes" class="primary-button">گەڕان بە ناو هەستەکاندا ✦</a>
+          <a href="#languages" class="secondary-button">٧ زمان • یەک دڵ</a>
+        </div>
+
+        <div class="hero-stats">
+          <div>
+            <strong>07</strong>
+            <span>زمان</span>
+          </div>
+          <div>
+            <strong>∞</strong>
+            <span>وتەی تایبەت</span>
+          </div>
+          <div>
+            <strong>∞</strong>
+            <span>هەست</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+
+        <div class="orbit orbit-one"></div>
+        <div class="orbit orbit-two"></div>
+        <div class="orbit orbit-three"></div>
+
+        <div class="floating-heart heart-one">♡</div>
+        <div class="floating-heart heart-two">✧</div>
+        <div class="floating-heart heart-three">∞</div>
+
+        <div class="hero-logo">
+          <div class="hero-logo-symbol">
+            <span>Ⲙ</span>
+            <span>Ɐ</span>
+          </div>
+          <div class="hero-logo-name">M~A~MARAL</div>
+          <div class="hero-logo-caption">TWO SYMBOLS · ONE UNIVERSE</div>
+          <div class="hero-logo-subcaption">Muhammad A. BaSs</div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SEARCH PANEL -->
+    <div id="searchPanel" class="search-panel hidden">
+      <input
+        id="quoteSearch"
+        type="search"
+        placeholder="بگەڕێ بۆ وتە، هەست یان وشە..."
+        autocomplete="off"
+      >
+    </div>
+
+    <!-- QUOTES -->
+    <section id="quotes" class="section content-section">
+
+      <div class="section-heading">
+        <span class="section-kicker">WORDS THAT TOUCH THE SOUL</span>
+        <h2>جیهانی <span class="gradient-text">وتەکان</span></h2>
+        <p>هەر وتەیەک چیرۆکێکە؛ هەر دڵێکیش جیهانێکە.</p>
+      </div>
+
+      <div class="filters">
+
+        <div class="filter-group">
+          <label for="languageFilter">زمان</label>
+          <select id="languageFilter">
+            <option value="all">هەموو زمانەکان</option>
+            <option value="korean">🇰🇷 کۆری</option>
+            <option value="english">🇬🇧 ئینگلیزی</option>
+            <option value="arabic">🇮🇶 عەرەبی</option>
+            <option value="hindi">🇮🇳 هیندی</option>
+            <option value="japanese">🇯🇵 ژاپۆنی</option>
+            <option value="french">🇫🇷 فەڕەنسی</option>
+            <option value="russian">🇷🇺 ڕووسی</option>
+          </select>
+        </div>
+
+        <div class="filter-group">
+          <label for="categoryFilter">جۆری هەست</label>
+          <select id="categoryFilter">
+            <option value="all">هەموو هەستەکان</option>
+            <option value="love">خۆشەویستی ❤️</option>
+            <option value="sad">دڵتەنگی 💔</option>
+            <option value="life">ژیان 🌙</option>
+            <option value="motivation">هاندانی خۆت ✨</option>
+          </select>
+        </div>
+
+      </div>
+
+      <div id="quoteGrid" class="quote-grid"></div>
+
+      <div id="emptyMessage" class="empty-message hidden">
+        <span>♡</span>
+        <h3>هیچ وتەیەک نەدۆزرایەوە</h3>
+        <p>زمان یان وشەی گەڕانەکەت بگۆڕە و دووبارە هەوڵ بدە.</p>
+      </div>
+
+      <div class="load-more-wrap">
+        <button id="loadMore" class="secondary-button">وتەی زیاتر ببینە ↓</button>
+      </div>
+
+    </section>
+
+    <!-- LANGUAGES -->
+    <section id="languages" class="section content-section">
+
+      <div class="section-heading">
+        <span class="section-kicker">SEVEN LANGUAGES · ONE FEELING</span>
+        <h2>زمانەکانی <span class="gradient-text">خۆشەویستی</span></h2>
+        <p>زمانەکان جیاوازن، بەڵام هەست دەتوانێت هەمان مانا بگەیەنێت.</p>
+      </div>
+
+      <div class="language-grid">
+
+        <button class="language-card" data-language="korean">
+          <span class="language-flag">🇰🇷</span>
+          <strong>کۆری</strong>
+          <span>Korean · 한국어</span>
+          <small> وتە ←</small>
+        </button>
+
+        <button class="language-card" data-language="english">
+          <span class="language-flag">🇬🇧</span>
+          <strong>ئینگلیزی</strong>
+          <span>English</span>
+          <small> وتە ←</small>
+        </button>
+
+        <button class="language-card" data-language="arabic">
+          <span class="language-flag">🇮🇶</span>
+          <strong>عەرەبی</strong>
+          <span>العربية</span>
+          <small> وتە ←</small>
+        </button>
+
+        <button class="language-card" data-language="hindi">
+          <span class="language-flag">🇮🇳</span>
+          <strong>هیندی</strong>
+          <span>हिन्दी</span>
+          <small> وتە ←</small>
+        </button>
+
+        <button class="language-card" data-language="japanese">
+          <span class="language-flag">🇯🇵</span>
+          <strong>ژاپۆنی</strong>
+          <span>日本語</span>
+          <small> وتە ←</small>
+        </button>
+
+        <button class="language-card" data-language="french">
+          <span class="language-flag">🇫🇷</span>
+          <strong>فەڕەنسی</strong>
+          <span>Français</span>
+          <small> وتە ←</small>
+        </button>
+
+        <button class="language-card" data-language="russian">
+          <span class="language-flag">🇷🇺</span>
+          <strong>ڕووسی</strong>
+          <span>Русский</span>
+          <small> وتە ←</small>
+        </button>
+
+      </div>
+    </section>
+
+    <!-- POEMS -->
+    <section id="poems" class="section content-section">
+
+      <div class="section-heading">
+        <span class="section-kicker">POETRY FROM THE HEART</span>
+        <h2>شیعرەکانی <span class="gradient-text">دڵ</span></h2>
+        <p>هەندێک هەست شیعر دەبن، کاتێک وشەکان بە تەنیا بەس نین.</p>
+      </div>
+
+      <div class="poem-grid">
+
+        <article class="poem-card">
+          <span class="poem-number">01 / LOVE</span>
+          <h3>لە نێوان دوو دڵدا</h3>
+          <p>
+            لە نێوان هەزاران ڕێگا،<br>
+            دڵم ڕێگای تۆی هەڵبژارد.<br>
+            نە بە وشە، نە بە بەڵێن،<br>
+            بە ئارامییەک کە لە تۆدا دۆزییەوە.
+          </p>
+          <button class="copy-poem" data-poem="لە نێوان هەزاران ڕێگا، دڵم ڕێگای تۆی هەڵبژارد. نە بە وشە، نە بە بەڵێن، بە ئارامییەک کە لە تۆدا دۆزییەوە.">
+            کۆپی شیعر ↗
+          </button>
+        </article>
+
+        <article class="poem-card">
+          <span class="poem-number">02 / DISTANCE</span>
+          <h3>دووری</h3>
+          <p>
+            دووری بە کیلۆمەتر ناپێورێت،<br>
+            بەو ساتانە دەپێورێت<br>
+            کە دڵت کەسێک دەوێت،<br>
+            بەڵام ناتوانیت پێی بڵێیت.
+          </p>
+          <button class="copy-poem" data-poem="دووری بە کیلۆمەتر ناپێورێت، بەو ساتانە دەپێورێت کە دڵت کەسێک دەوێت، بەڵام ناتوانیت پێی بڵێیت.">
+            کۆپی شیعر ↗
+          </button>
+        </article>
+
+        <article class="poem-card">
+          <span class="poem-number">03 / FOREVER</span>
+          <h3>هەستێکی بێکۆتایی</h3>
+          <p>
+            هەندێک کەس تەنها دێن و دەڕۆن،<br>
+            هەندێکیش دەبن بە بەشێک لە ژیان.<br>
+            تۆ ئەو بیرەوەرییەیت،<br>
+            کە کات ناتوانێت بیکاتە کۆتایی.
+          </p>
+          <button class="copy-poem" data-poem="هەندێک کەس تەنها دێن و دەڕۆن، هەندێکیش دەبن بە بەشێک لە ژیان. تۆ ئەو بیرەوەرییەیت، کە کات ناتوانێت بیکاتە کۆتایی.">
+            کۆپی شیعر ↗
+          </button>
+        </article>
+
+        <!-- 01 -->
+<article class="poem-card">
+  <span class="poem-number">04 / MY HEART</span>
+  <h3>دڵم تۆی هەڵبژاردووە</h3>
+  <p>
+    لە نێو هەموو ئەو ڕووخسارانەی دنیا،<br>
+    دڵم تەنها بە تۆوە ئارام دەگرێت.<br>
+    وەک ئەوەی پێش ئەوەی تۆ ببینێت،<br>
+    ناوی تۆی لە ناخی خۆیدا نووسیبێت.
+  </p>
+  <button class="copy-poem" data-poem="لە نێو هەموو ئەو ڕووخسارانەی دنیا، دڵم تەنها بە تۆوە ئارام دەگرێت. وەک ئەوەی پێش ئەوەی تۆ ببینێت، ناوی تۆی لە ناخی خۆیدا نووسیبێت.">کۆپی شیعر ↗</button>
+</article>
+
+<!-- 02 -->
+<article class="poem-card">
+  <span class="poem-number">05 / YOUR EYES</span>
+  <h3>چاوانت جیهانێکن</h3>
+  <p>
+    چاوانت دوو ئەستێرەی شەوی دڵمن،<br>
+    لە تاریکیدا ڕێگام بۆ ڕوون دەکەنەوە.<br>
+    ئەگەر هەموو جیهانیش بێدەنگ بێت،<br>
+    چاوانت هێشتا لەگەڵ دڵم قسە دەکەن.
+  </p>
+  <button class="copy-poem" data-poem="چاوانت دوو ئەستێرەی شەوی دڵمن، لە تاریکیدا ڕێگام بۆ ڕوون دەکەنەوە. ئەگەر هەموو جیهانیش بێدەنگ بێت، چاوانت هێشتا لەگەڵ دڵم قسە دەکەن.">کۆپی شیعر ↗</button>
+</article>
+
+<!-- 03 -->
+<article class="poem-card">
+  <span class="poem-number">06 / FOREVER</span>
+  <h3>هەمیشە تۆ</h3>
+  <p>
+    ئەگەر کات هەموو شتێک بگۆڕێت،<br>
+    ئەگەر ساڵان وەک با تێپەڕن،<br>
+    لە ناو دڵمدا شوێنێک هەیە،<br>
+    کە هەرگیز کەس جگە لە تۆی تێدا نابێت.
+  </p>
+  <button class="copy-poem" data-poem="ئەگەر کات هەموو شتێک بگۆڕێت، ئەگەر ساڵان وەک با تێپەڕن، لە ناو دڵمدا شوێنێک هەیە، کە هەرگیز کەس جگە لە تۆی تێدا نابێت.">کۆپی شیعر ↗</button>
+</article>
+
+<!-- 04 -->
+<article class="poem-card">
+  <span class="poem-number">07 / YOUR SMILE</span>
+  <h3>پێکەنینت</h3>
+  <p>
+    پێکەنینت وەک بەیانێکی نوێیە،<br>
+    کە بە هاتنت شەوەکانم دەڕووناکێنێت.<br>
+    تۆ بە تەنها یەک پێکەنین،<br>
+    دەتوانیت هەموو ماندووبوونم لەبیر ببەیت.
+  </p>
+  <button class="copy-poem" data-poem="پێکەنینت وەک بەیانێکی نوێیە، کە بە هاتنت شەوەکانم دەڕووناکێنێت. تۆ بە تەنها یەک پێکەنین، دەتوانیت هەموو ماندووبوونم لەبیر ببەیت.">کۆپی شیعر ↗</button>
+</article>
+
+<!-- 05 -->
+<article class="poem-card">
+  <span class="poem-number">08 / DISTANCE</span>
+  <h3>دووریت لە من</h3>
+  <p>
+    دووری بە کیلۆمەتر پێوانە ناکرێت،<br>
+    بەو شەوانە پێوانە دەکرێت کە بیرت دەکەمەوە.<br>
+    تۆ لەوانەیە لە من دوور بیت،<br>
+    بەڵام لە هەموو بیرێکم نزیکتری.
+  </p>
+  <button class="copy-poem" data-poem="دووری بە کیلۆمەتر پێوانە ناکرێت، بەو شەوانە پێوانە دەکرێت کە بیرت دەکەمەوە. تۆ لەوانەیە لە من دوور بیت، بەڵام لە هەموو بیرێکم نزیکتری.">کۆپی شیعر ↗</button>
+</article>
+
+<!-- 06 -->
+<article class="poem-card">
+  <span class="poem-number">09 / MY PEACE</span>
+  <h3>ئارامیی دڵم</h3>
+  <p>
+    لە جیهانێک پڕ لە دەنگ و هاوار،<br>
+    تەنها دەنگی تۆ ئارامم دەکاتەوە.<br>
+    هەموو شتێک لە دەرەوە ئاڵۆز بێت،<br>
+    بە قسەکردن لەگەڵ تۆ دڵم دەگەڕێتەوە.
+  </p>
+  <button class="copy-poem" data-poem="لە جیهانێک پڕ لە دەنگ و هاوار، تەنها دەنگی تۆ ئارامم دەکاتەوە. هەموو شتێک لە دەرەوە ئاڵۆز بێت، بە قسەکردن لەگەڵ تۆ دڵم دەگەڕێتەوە.">کۆپی شیعر ↗</button>
+</article>
+
+<!-- 07 -->
+<article class="poem-card">
+  <span class="poem-number">10 / MOONLIGHT</span>
+  <h3>مانگی شەوەکانم</h3>
+  <p>
+    مانگ لە ئاسماندا جوانە،<br>
+    بەڵام تۆ لە دڵمدا جوانتری.<br>
+    مانگ تاریکی شەو ڕووناک دەکاتەوە،<br>
+    تۆ تاریکی ناخم دەگۆڕیت بۆ بەهار.
+  </p>
+  <button class="copy-poem" data-poem="مانگ لە ئاسماندا جوانە، بەڵام تۆ لە دڵمدا جوانتری. مانگ تاریکی شەو ڕووناک دەکاتەوە، تۆ تاریکی ناخم دەگۆڕیت بۆ بەهار.">کۆپی شیعر ↗</button>
+</article>
+
+<!-- 08 -->
+<article class="poem-card">
+  <span class="poem-number">11 / YOUR NAME</span>
+  <h3>ناوت لە دڵمدا</h3>
+  <p>
+    ناوت وەک گۆرانییەک لە دڵم دەژمێرێت،<br>
+    هەر جارێک بیهێنمەوە، دڵم پێدەکەنێت.<br>
+    ئەگەر زمانم بێدەنگیش بێت،<br>
+    ناخم هەزار جار بانگی تۆ دەکات.
+  </p>
+  <button class="copy-poem" data-poem="ناوت وەک گۆرانییەک لە دڵم دەژمێرێت، هەر جارێک بیهێنمەوە، دڵم پێدەکەنێت. ئەگەر زمانم بێدەنگیش بێت، ناخم هەزار جار بانگی تۆ دەکات.">کۆپی شیعر ↗</button>
+</article>
+
+<!-- 09 -->
+<article class="poem-card">
+  <span class="poem-number">12 / ONE WISH</span>
+  <h3>یەک ئاوات</h3>
+  <p>
+    ئەگەر هەموو ئاواتەکانم ببنە ڕاستی،<br>
+    هێشتا یەک ئاواتم بۆ دەمێنێتەوە؛<br>
+    ئەوەی کاتێک چاوم لە خەو هەڵدەکەم،<br>
+    تۆ یەکەم کەس بیت کە دەیبینم.
+  </p>
+  <button class="copy-poem" data-poem="ئەگەر هەموو ئاواتەکانم ببنە ڕاستی، هێشتا یەک ئاواتم بۆ دەمێنێتەوە؛ ئەوەی کاتێک چاوم لە خەو هەڵدەکەم، تۆ یەکەم کەس بیت کە دەیبینم.">کۆپی شیعر ↗</button>
+</article>
+
+<!-- 10 -->
+<article class="poem-card">
+  <span class="poem-number">13/ MY HOME</span>
+  <h3>تۆ ماڵی منیت</h3>
+  <p>
+    ماڵ ئەو شوێنە نییە دیوارەکانی هەبن،<br>
+    ماڵ ئەو شوێنەیە دڵت لێی ئارام بگرێت.<br>
+    بۆ من ئەو شوێنە تۆیت،<br>
+    هەر لە کوێ بیت، دڵم بۆ لات دەگەڕێتەوە.
+  </p>
+  <button class="copy-poem" data-poem="ماڵ ئەو شوێنە نییە دیوارەکانی هەبن، ماڵ ئەو شوێنەیە دڵت لێی ئارام بگرێت. بۆ من ئەو شوێنە تۆیت، هەر لە کوێ بیت، دڵم بۆ لات دەگەڕێتەوە.">کۆپی شیعر ↗</button>
+</article>
+
+<!-- 11 -->
+<article class="poem-card">
+  <span class="poem-number">14 / YOUR VOICE</span>
+  <h3>دەنگی تۆ</h3>
+  <p>
+    دەنگت لە هەزار گۆرانی خۆشترە،<br>
+    چونکە هەر وشەیەکی لە تۆوە دێت.<br>
+    هەندێک دەنگ تەنها دەبیسترێت،<br>
+    بەڵام دەنگی تۆ تا ناخم دەچێت.
+  </p>
+  <button class="copy-poem" data-poem="دەنگت لە هەزار گۆرانی خۆشترە، چونکە هەر وشەیەکی لە تۆوە دێت. هەندێک دەنگ تەنها دەبیسترێت، بەڵام دەنگی تۆ تا ناخم دەچێت.">کۆپی شیعر ↗</button>
+</article>
+
+<!-- 12 -->
+<article class="poem-card">
+  <span class="poem-number">15 / FIRST LOVE</span>
+  <h3>یەکەم هەست</h3>
+  <p>
+    پێش تۆش دڵم لێدەدا،<br>
+    بەڵام نەمدەزانی بۆ چی دەژی.<br>
+    تۆ هاتیت و فێرت کردم،<br>
+    کە هەندێک کەس مانای ژیان دەگۆڕن.
+  </p>
+  <button class="copy-poem" data-poem="پێش تۆش دڵم لێدەدا، بەڵام نەمدەزانی بۆ چی دەژی. تۆ هاتیت و فێرت کردم، کە هەندێک کەس مانای ژیان دەگۆڕن.">کۆپی شیعر ↗</button>
+</article>
+
+<!-- 13 -->
+<article class="poem-card">
+  <span class="poem-number">16 / LITTLE THINGS</span>
+  <h3>وردە شتەکان</h3>
+  <p>
+    خۆشەویستی هەمیشە وشەی گەورە نییە،<br>
+    جارێک لە پرسیاری «چۆنیت؟» خۆی دەبینێتەوە.<br>
+    لە بیرکردنەوەی شتێکی بچووک،<br>
+    لەوەی کەسێک دڵت بە ڕاستی دەبینێتەوە.
+  </p>
+  <button class="copy-poem" data-poem="خۆشەویستی هەمیشە وشەی گەورە نییە، جارێک لە پرسیاری چۆنیت خۆی دەبینێتەوە. لە بیرکردنەوەی شتێکی بچووک، لەوەی کەسێک دڵت بە ڕاستی دەبینێتەوە.">کۆپی شیعر ↗</button>
+</article>
+
+<!-- 14 -->
+<article class="poem-card">
+  <span class="poem-number">17 / MY TOMORROW</span>
+  <h3>سبەینی من</h3>
+  <p>
+    کاتێک بیر لە سبەینێ دەکەمەوە،<br>
+    وێنەی تۆ لە بیرمدا دروست دەبێت.<br>
+    نەک چونکە دنیا بێ کێشە دەبێت،<br>
+    بەڵکو چونکە دەمەوێت لەگەڵ تۆ ڕووبەڕووی ببمەوە.
+  </p>
+  <button class="copy-poem" data-poem="کاتێک بیر لە سبەینێ دەکەمەوە، وێنەی تۆ لە بیرمدا دروست دەبێت. نەک چونکە دنیا بێ کێشە دەبێت، بەڵکو چونکە دەمەوێت لەگەڵ تۆ ڕووبەڕووی ببمەوە.">کۆپی شیعر ↗</button>
+</article>
+
+<!-- 15 -->
+<article class="poem-card">
+  <span class="poem-number">18 / SILENCE</span>
+  <h3>بێدەنگیی نێوانمان</h3>
+  <p>
+    هەموو هەستێک پێویستی بە قسە نییە،<br>
+    هەندێک جار بێدەنگی خۆی پڕە لە مانا.<br>
+    ئەگەر تۆ لە تەنیشتم دابنیشیت،<br>
+    تەنانەت بێ قسەش دڵم پڕ دەبێت لە خۆشی.
+  </p>
+  <button class="copy-poem" data-poem="هەموو هەستێک پێویستی بە قسە نییە، هەندێک جار بێدەنگی خۆی پڕە لە مانا. ئەگەر تۆ لە تەنیشتم دابنیشیت، تەنانەت بێ قسەش دڵم پڕ دەبێت لە خۆشی.">کۆپی شیعر ↗</button>
+</article>
+
+<!-- 16 -->
+<article class="poem-card">
+  <span class="poem-number">19 / MY FLOWER</span>
+  <h3>گوڵی دڵم</h3>
+  <p>
+    لە باخچەی دڵمدا گوڵێک هەیە،<br>
+    نە بە باران دەڕوێت، نە بە بەفر دەمرێت.<br>
+    بە یادی تۆ هەر ڕۆژێک تازە دەبێتەوە،<br>
+    چونکە ڕەگی لە ناخی خۆشەویستیدا چەسپاوە.
+  </p>
+  <button class="copy-poem" data-poem="لە باخچەی دڵمدا گوڵێک هەیە، نە بە باران دەڕوێت، نە بە بەفر دەمرێت. بە یادی تۆ هەر ڕۆژێک تازە دەبێتەوە، چونکە ڕەگی لە ناخی خۆشەویستیدا چەسپاوە.">کۆپی شیعر ↗</button>
+</article>
+
+<!-- 17 -->
+<article class="poem-card">
+  <span class="poem-number">20 / EVERY DAY</span>
+  <h3>هەر ڕۆژێک زیاتر</h3>
+  <p>
+    ڕۆژێک هەبوو تەنها ناوم لەبیرت بوو،<br>
+    ئێستا دڵم هەموو ڕۆژێک تۆ دەوێت.<br>
+    خۆشەویستی لە یەک چرکەدا دەست پێ دەکات،<br>
+    بەڵام بە هەزار سات گەورەتر دەبێت.
+  </p>
+  <button class="copy-poem" data-poem="ڕۆژێک هەبوو تەنها ناوم لەبیرت بوو، ئێستا دڵم هەموو ڕۆژێک تۆ دەوێت. خۆشەویستی لە یەک چرکەدا دەست پێ دەکات، بەڵام بە هەزار سات گەورەتر دەبێت.">کۆپی شیعر ↗</button>
+</article>
+
+<!-- 18 -->
+<article class="poem-card">
+  <span class="poem-number">21 / RAIN</span>
+  <h3>بارانی یادت</h3>
+  <p>
+    کاتێک باران بەسەر پەنجەرەدا دەبارێت،<br>
+    هەر دڵۆپێک بیرێکی تۆم بۆ دەهێنێتەوە.<br>
+    شەقامەکان تەڕ دەبن، شەوەکە ساردە،<br>
+    بەڵام یادت گەرمییەک لە دڵمدا دەهێڵێتەوە.
+  </p>
+  <button class="copy-poem" data-poem="کاتێک باران بەسەر پەنجەرەدا دەبارێت، هەر دڵۆپێک بیرێکی تۆم بۆ دەهێنێتەوە. شەقامەکان تەڕ دەبن، شەوەکە ساردە، بەڵام یادت گەرمییەک لە دڵمدا دەهێڵێتەوە.">کۆپی شیعر ↗</button>
+</article>
+
+<!-- 19 -->
+<article class="poem-card">
+  <span class="poem-number">22 / DESTINY</span>
+  <h3>چارەنووسمان</h3>
+  <p>
+    نازانم چارەنووس چی بۆمان نووسیوە،<br>
+    نازانم ڕێگاکانمان بۆ کوێ دەچن.<br>
+    بەڵام ئەگەر هەڵبژاردنم پێ بدرێت،<br>
+    دەمەوێت لەگەڵ تۆ هەموو ڕێگایەک ببڕم.
+  </p>
+  <button class="copy-poem" data-poem="نازانم چارەنووس چی بۆمان نووسیوە، نازانم ڕێگاکانمان بۆ کوێ دەچن. بەڵام ئەگەر هەڵبژاردنم پێ بدرێت، دەمەوێت لەگەڵ تۆ هەموو ڕێگایەک ببڕم.">کۆپی شیعر ↗</button>
+</article>
+
+<!-- 20 -->
+<article class="poem-card">
+  <span class="poem-number">23 / ONE PERSON</span>
+  <h3>یەک کەس لە هەموو دنیا</h3>
+  <p>
+    دنیا پڕە لە خەڵک و چیرۆک،<br>
+    پڕە لە ڕووخساری جیاواز و جوان.<br>
+    بەڵام دڵم لە نێو ئەم هەموو شتانەدا،<br>
+    تەنها یەک کەسی هەڵبژاردووە؛ تۆ.
+  </p>
+  <button class="copy-poem" data-poem="دنیا پڕە لە خەڵک و چیرۆک، پڕە لە ڕووخساری جیاواز و جوان. بەڵام دڵم لە نێو ئەم هەموو شتانەدا، تەنها یەک کەسی هەڵبژاردووە؛ تۆ.">کۆپی شیعر ↗</button>
+</article>
+
+<!-- 21 -->
+<article class="poem-card">
+  <span class="poem-number">24 / DREAMS</span>
+  <h3>لە خەونەکانمدا</h3>
+  <p>
+    شەو کە چاوم دادەخەم،<br>
+    هیوای بینینت لە دڵمدا دەخەوێت.<br>
+    بەیانی کە چاوم دەکەمەوە،<br>
+    یەکەم بیرم ئەوەیە کە کەی دەتبینمەوە.
+  </p>
+  <button class="copy-poem" data-poem="شەو کە چاوم دادەخەم، هیوای بینینت لە دڵمدا دەخەوێت. بەیانی کە چاوم دەکەمەوە، یەکەم بیرم ئەوەیە کە کەی دەتبینمەوە.">کۆپی شیعر ↗</button>
+</article>
+
+<!-- 22 -->
+<article class="poem-card">
+  <span class="poem-number">25/ YOUR HAND</span>
+  <h3>دەستی تۆ</h3>
+  <p>
+    پێویستم بە دەستێکە هەموو شتێک چارەسەر بکات؟<br>
+    نەخێر، تەنها دەستێک کە لەگەڵم بێت.<br>
+    لە ڕێگای درێژی ژیاندا،<br>
+    دەستی تۆ بەسە بۆ ئەوەی هەست بکەم تەنها نیم.
+  </p>
+  <button class="copy-poem" data-poem="پێویستم بە دەستێکە هەموو شتێک چارەسەر بکات؟ نەخێر، تەنها دەستێک کە لەگەڵم بێت. لە ڕێگای درێژی ژیاندا، دەستی تۆ بەسە بۆ ئەوەی هەست بکەم تەنها نیم.">کۆپی شیعر ↗</button>
+</article>
+
+<!-- 23 -->
+<article class="poem-card">
+  <span class="poem-number">26 / HEARTBEAT</span>
+  <h3>لێدانی دڵم</h3>
+  <p>
+    دڵم زمانێکی تایبەتی هەیە،<br>
+    کە تەنها بە هاتنی تۆ دەستی پێ دەکات.<br>
+    هەر لێدانێکی هەڵگری نهێنییەکە،<br>
+    نهێنییەک کە ناوی تۆیە.
+  </p>
+  <button class="copy-poem" data-poem="دڵم زمانێکی تایبەتی هەیە، کە تەنها بە هاتنی تۆ دەستی پێ دەکات. هەر لێدانێکی هەڵگری نهێنییەکە، نهێنییەک کە ناوی تۆیە.">کۆپی شیعر ↗</button>
+</article>
+
+<!-- 24 -->
+<article class="poem-card">
+  <span class="poem-number">27 / OLD DAYS</span>
+  <h3>یادی ڕۆژانی پێشوو</h3>
+  <p>
+    هەندێک سات هەرگیز کۆن نابنەوە،<br>
+    تەنانەت ئەگەر ساڵان لێیان تێپەڕێت.<br>
+    ئەو کاتانەی لەگەڵ تۆ پێکەنیم،<br>
+    هێشتا لە دڵمدا وەک ئەمڕۆ زیندوون.
+  </p>
+  <button class="copy-poem" data-poem="هەندێک سات هەرگیز کۆن نابنەوە، تەنانەت ئەگەر ساڵان لێیان تێپەڕێت. ئەو کاتانەی لەگەڵ تۆ پێکەنیم، هێشتا لە دڵمدا وەک ئەمڕۆ زیندوون.">کۆپی شیعر ↗</button>
+</article>
+
+<!-- 25 -->
+<article class="poem-card">
+  <span class="poem-number">28 / MY UNIVERSE</span>
+  <h3>جیهانی بچووکم</h3>
+  <p>
+    ئەستێرەکان زۆرن، ئاسمان بێکۆتاییە،<br>
+    بەڵام جیهانی من لە چاوەکانتدا کورت دەبێتەوە.<br>
+    لە نێو ئەو هەموو گەردوونە فراوانەدا،<br>
+    دڵم تەنها لە تۆدا شوێنی خۆی دەدۆزێتەوە.
+  </p>
+  <button class="copy-poem" data-poem="ئەستێرەکان زۆرن، ئاسمان بێکۆتاییە، بەڵام جیهانی من لە چاوەکانتدا کورت دەبێتەوە. لە نێو ئەو هەموو گەردوونە فراوانەدا، دڵم تەنها لە تۆدا شوێنی خۆی دەدۆزێتەوە.">کۆپی شیعر ↗</button>
+</article>
+
+<!-- 26 -->
+<article class="poem-card">
+  <span class="poem-number">29 / MY PRAYER</span>
+  <h3>دوعای دڵم</h3>
+  <p>
+    لە هەر دوعایەکدا کە بۆ سبەینێ دەیکەم،<br>
+    هیوای خۆشیی تۆش لەگەڵدایە.<br>
+    چونکە خۆشەویستی تەنها داواکردنی نییە،<br>
+    بەڵکو دڵخۆشبوونە بەوەی تۆش دڵخۆش بیت.
+  </p>
+  <button class="copy-poem" data-poem="لە هەر دوعایەکدا کە بۆ سبەینێ دەیکەم، هیوای خۆشیی تۆش لەگەڵدایە. چونکە خۆشەویستی تەنها داواکردنی نییە، بەڵکو دڵخۆشبوونە بەوەی تۆش دڵخۆش بیت.">کۆپی شیعر ↗</button>
+</article>
+
+<!-- 27 -->
+<article class="poem-card">
+  <span class="poem-number">30 / WITHOUT WORDS</span>
+  <h3>بێ ئەوەی بڵێم</h3>
+  <p>
+    هەموو جارێک ناڵێم چەند خۆشم دەوێیت،<br>
+    بەڵام لە کردارە بچووکەکانمدا دەردەکەوێت.<br>
+    لە پرسیارەکانم، لە بیرکردنەوەم،<br>
+    لە هەموو ئەو کاتانەی کە دڵم بۆت دەگەڕێت.
+  </p>
+  <button class="copy-poem" data-poem="هەموو جارێک ناڵێم چەند خۆشم دەوێیت، بەڵام لە کردارە بچووکەکانمدا دەردەکەوێت. لە پرسیارەکانم، لە بیرکردنەوەم، لە هەموو ئەو کاتانەی کە دڵم بۆت دەگەڕێت.">کۆپی شیعر ↗</button>
+</article>
+
+<!-- 28 -->
+<article class="poem-card">
+  <span class="poem-number">31 / SPRING</span>
+  <h3>بەهاری هاتنت</h3>
+  <p>
+    پێش تۆ، ڕۆژەکانم وەک پاییز بوون،<br>
+    بێ ڕەنگ، بێ گەرمی، بێ چاوەڕوانی.<br>
+    تۆ هاتیت و گوڵەکان گەڕانەوە،<br>
+    ئێستا دڵم هەر ڕۆژێک بەهارە.
+  </p>
+  <button class="copy-poem" data-poem="پێش تۆ، ڕۆژەکانم وەک پاییز بوون، بێ ڕەنگ، بێ گەرمی، بێ چاوەڕوانی. تۆ هاتیت و گوڵەکان گەڕانەوە، ئێستا دڵم هەر ڕۆژێک بەهارە.">کۆپی شیعر ↗</button>
+</article>
+
+<!-- 29 -->
+<article class="poem-card">
+  <span class="poem-number">32 / A THOUSAND WORDS</span>
+  <h3>هەزار وشە</h3>
+  <p>
+    هەزار وشەم لە دڵدا کۆ کردووەتەوە،<br>
+    بۆ ئەوەی ڕۆژێک پێت بڵێم چۆن هەست دەکەم.<br>
+    بەڵام کاتێک چاوم بە چاوت دەکەوێت،<br>
+    هەموو وشەکان ون دەبن و دڵم قسە دەکات.
+  </p>
+  <button class="copy-poem" data-poem="هەزار وشەم لە دڵدا کۆ کردووەتەوە، بۆ ئەوەی ڕۆژێک پێت بڵێم چۆن هەست دەکەم. بەڵام کاتێک چاوم بە چاوت دەکەوێت، هەموو وشەکان ون دەبن و دڵم قسە دەکات.">کۆپی شیعر ↗</button>
+</article>
+
+<!-- 30 -->
+<article class="poem-card">
+  <span class="poem-number">33 / OUR STORY</span>
+  <h3>چیرۆکی ئێمە</h3>
+  <p>
+    هەر چیرۆکێک دەستپێکێکی هەیە،<br>
+    چیرۆکی ئێمەش بە ساتێک دەستی پێ کرد.<br>
+    بەڵام ئەوەی دەمەوێت بزانم،<br>
+    ئەوەیە چۆن هەموو لاپەڕەکانی لەگەڵ تۆ بنووسم.
+  </p>
+  <button class="copy-poem" data-poem="هەر چیرۆکێک دەستپێکێکی هەیە، چیرۆکی ئێمەش بە ساتێک دەستی پێ کرد. بەڵام ئەوەی دەمەوێت بزانم، ئەوەیە چۆن هەموو لاپەڕەکانی لەگەڵ تۆ بنووسم.">کۆپی شیعر ↗</button>
+</article>
+
+<!-- 31 -->
+<article class="poem-card">
+  <span class="poem-number">34 / MY SUNRISE</span>
+  <h3>خۆری بەیانیی من</h3>
+  <p>
+    کاتێک خۆر لە پشت چیاکانەوە هەڵدێت،<br>
+    ڕۆژ دەست پێ دەکات و جیهان زیندوو دەبێتەوە.<br>
+    بۆ من بەیانی ئەو کاتەیە،<br>
+    کە پەیامێک لە تۆوە دێت و دڵم پێدەکەنێت.
+  </p>
+  <button class="copy-poem" data-poem="کاتێک خۆر لە پشت چیاکانەوە هەڵدێت، ڕۆژ دەست پێ دەکات و جیهان زیندوو دەبێتەوە. بۆ من بەیانی ئەو کاتەیە، کە پەیامێک لە تۆوە دێت و دڵم پێدەکەنێت.">کۆپی شیعر ↗</button>
+</article>
+
+<!-- 32 -->
+<article class="poem-card">
+  <span class="poem-number">35 / TRUST</span>
+  <h3>باوەڕی دڵم</h3>
+  <p>
+    خۆشەویستی تەنها وتنی «خۆشم دەوێیت» نییە،<br>
+    خۆشەویستی ئەوەیە لە قورسیدا پشتت پێ بگرم.<br>
+    ئەوەی بە بێ ترس دڵم بۆت بکەمەوە،<br>
+    و بزانم هەستەکانم لە لای تۆ بە نرخن.
+  </p>
+  <button class="copy-poem" data-poem="خۆشەویستی تەنها وتنی خۆشم دەوێیت نییە، خۆشەویستی ئەوەیە لە قورسیدا پشتت پێ بگرم. ئەوەی بە بێ ترس دڵم بۆت بکەمەوە، و بزانم هەستەکانم لە لای تۆ بە نرخن.">کۆپی شیعر ↗</button>
+</article>
+
+<!-- 33 -->
+<article class="poem-card">
+  <span class="poem-number">36 / YOUR HAPPINESS</span>
+  <h3>خۆشیی تۆ</h3>
+  <p>
+    ئەگەر ڕۆژێک دنیا ماندووت کرد،<br>
+    بیرت بێت کە کەسێک هەیە بە دڵەوە گوێت لێ دەگرێت.<br>
+    من ناتوانم هەموو کێشەکانت بسڕمەوە،<br>
+    بەڵام دەتوانم لە تەنیشتت بم تا ڕێگات ئاسانتر بێت.
+  </p>
+  <button class="copy-poem" data-poem="ئەگەر ڕۆژێک دنیا ماندووت کرد، بیرت بێت کە کەسێک هەیە بە دڵەوە گوێت لێ دەگرێت. من ناتوانم هەموو کێشەکانت بسڕمەوە، بەڵام دەتوانم لە تەنیشتت بم تا ڕێگات ئاسانتر بێت.">کۆپی شیعر ↗</button>
+</article>
+
+<!-- 34 -->
+<article class="poem-card">
+  <span class="poem-number">37 / OUR FUTURE</span>
+  <h3>ڕۆژانی داهاتوو</h3>
+  <p>
+    خەونم بە ڕۆژێکە کە لەگەڵ یەک قسە دەکەین،<br>
+    بە بیرەوەرییەکانمان پێدەکەنینەوە.<br>
+    و لە نێو هەموو گۆڕانکارییەکانی ژیاندا،<br>
+    هێشتا بە هەمان دڵ خۆشمان بوێت یەکتر.
+  </p>
+  <button class="copy-poem" data-poem="خەونم بە ڕۆژێکە کە لەگەڵ یەک قسە دەکەین، بە بیرەوەرییەکانمان پێدەکەنینەوە. و لە نێو هەموو گۆڕانکارییەکانی ژیاندا، هێشتا بە هەمان دڵ خۆشمان بوێت یەکتر.">کۆپی شیعر ↗</button>
+</article>
+
+<!-- 35 -->
+<article class="poem-card">
+  <span class="poem-number">38 / ONE LOOK</span>
+  <h3>یەک نیگا</h3>
+  <p>
+    هەندێک جار یەک نیگا بەسە،<br>
+    بۆ ئەوەی هەموو هەستەکانت ئاشکرا بن.<br>
+    چاوەکانت کە دەکەونە ناو چاوم،<br>
+    دڵم وشەیەک نادات، تەنها تۆ دەبینێت.
+  </p>
+  <button class="copy-poem" data-poem="هەندێک جار یەک نیگا بەسە، بۆ ئەوەی هەموو هەستەکانت ئاشکرا بن. چاوەکانت کە دەکەونە ناو چاوم، دڵم وشەیەک نادات، تەنها تۆ دەبینێت.">کۆپی شیعر ↗</button>
+</article>
+
+<!-- 36 -->
+<article class="poem-card">
+  <span class="poem-number">39 / MY FAVORITE</span>
+  <h3>دڵخوازترین کەسم</h3>
+  <p>
+    لە نێو هەموو شتە جوانەکانی ژیان،<br>
+    یادی تۆ یەکێکە لە جوانترینەکان.<br>
+    کاتێک بیرت دەکەمەوە، هەست دەکەم،<br>
+    هەندێک بەختەوەری بە دەنگی کەسێک دەناسرێتەوە.
+  </p>
+  <button class="copy-poem" data-poem="لە نێو هەموو شتە جوانەکانی ژیان، یادی تۆ یەکێکە لە جوانترینەکان. کاتێک بیرت دەکەمەوە، هەست دەکەم، هەندێک بەختەوەری بە دەنگی کەسێک دەناسرێتەوە.">کۆپی شیعر ↗</button>
+</article>
+
+<!-- 37 -->
+<article class="poem-card">
+  <span class="poem-number">40 / THE DISTANCE BETWEEN US</span>
+  <h3>لە نێوان دووری و نزیکی</h3>
+  <p>
+    لەوانەیە ڕێگایەک لە نێوانمان هەبێت،<br>
+    لەوانەیە هەندێک شەو بە یادی یەکتر بەسەر ببەین.<br>
+    بەڵام ئەگەر دڵەکانمان ڕاستگۆ بن،<br>
+    هیوای دیدار هەرگیز لەناو ناچێت.
+  </p>
+  <button class="copy-poem" data-poem="لەوانەیە ڕێگایەک لە نێوانمان هەبێت، لەوانەیە هەندێک شەو بە یادی یەکتر بەسەر ببەین. بەڵام ئەگەر دڵەکانمان ڕاستگۆ بن، هیوای دیدار هەرگیز لەناو ناچێت.">کۆپی شیعر ↗</button>
+</article>
+
+<!-- 38 -->
+<article class="poem-card">
+  <span class="poem-number">41 / MY PROMISE</span>
+  <h3>بەڵێنی دڵم</h3>
+  <p>
+    بەڵێن نادەم ژیان هەمیشە ئاسان بێت،<br>
+    یان هەموو ڕۆژێک خۆر لە ئاسماندا بێت.<br>
+    بەڵام ئەگەر بە ڕاستی یەکترمان هەڵبژارد،<br>
+    هەوڵ دەدەین لە ناخۆشی و خۆشیدا هاوڕێی یەکتر بین.
+  </p>
+  <button class="copy-poem" data-poem="بەڵێن نادەم ژیان هەمیشە ئاسان بێت، یان هەموو ڕۆژێک خۆر لە ئاسماندا بێت. بەڵام ئەگەر بە ڕاستی یەکترمان هەڵبژارد، هەوڵ دەدەین لە ناخۆشی و خۆشیدا هاوڕێی یەکتر بین.">کۆپی شیعر ↗</button>
+</article>
+
+<!-- 39 -->
+<article class="poem-card">
+  <span class="poem-number">42 / IF I COULD</span>
+  <h3>ئەگەر بتوانم</h3>
+  <p>
+    ئەگەر بتوانم ساتێک لە کات بوەستێنم،<br>
+    ئەو ساتە هەڵدەبژێرم کە تۆ پێدەکەنیت.<br>
+    چونکە لەو چرکەیەدا هەموو دنیا،<br>
+    لە چاومدا جوانتر لە هەمیشە دەبێت.
+  </p>
+  <button class="copy-poem" data-poem="ئەگەر بتوانم ساتێک لە کات بوەستێنم، ئەو ساتە هەڵدەبژێرم کە تۆ پێدەکەنیت. چونکە لەو چرکەیەدا هەموو دنیا، لە چاومدا جوانتر لە هەمیشە دەبێت.">کۆپی شیعر ↗</button>
+</article>
+
+<!-- 40 -->
+<article class="poem-card">
+  <span class="poem-number">43 / ONLY YOU</span>
+  <h3>تۆ و دڵی من</h3>
+  <p>
+    ئەگەر هەموو وشەکانی دنیا کۆ بکەمەوە،<br>
+    هێشتا وشەیەک نادۆزمەوە بۆ هەموو هەستم.<br>
+    تەنها ئەوە دەزانم کە لە نێو ئەم ژیانەدا،<br>
+    بوونی تۆ یەکێکە لە جوانترین بەختەکانی دڵم.
+  </p>
+  <button class="copy-poem" data-poem="ئەگەر هەموو وشەکانی دنیا کۆ بکەمەوە، هێشتا وشەیەک نادۆزمەوە بۆ هەموو هەستم. تەنها ئەوە دەزانم کە لە نێو ئەم ژیانەدا، بوونی تۆ یەکێکە لە جوانترین بەختەکانی دڵم.">کۆپی شیعر ↗</button>
+</article>
+
+      </div>
+    </section>
+
+    <!-- FAVORITES -->
+    <section id="favorites" class="section content-section">
+      <div class="section-heading">
+        <span class="section-kicker">YOUR PERSONAL COLLECTION</span>
+        <h2>گۆشەی <span class="gradient-text">دڵخوازەکانت</span></h2>
+        <p>ئەو وتانەی کە دڵت پێیان خۆشە، لێرە هەڵیان بگرە.</p>
+      </div>
+
+      <div id="favoritesGrid" class="quote-grid"></div>
+
+      <div id="favoritesEmpty" class="empty-message">
+        <span>♡</span>
+        <h3>دڵخوازەکانت هێشتا بەتاڵن</h3>
+        <p>لە وتەکاندا کرتە لەسەر نیشانەی دڵ بکە بۆ زیادکردنیان.</p>
+      </div>
+
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section about-section">
+
+      <div class="about-symbol">
+        <div class="about-logo">
+          <span>Ⲙ</span><span>Ɐ</span>
+        </div>
+        <h2>M~A~MARAL</h2>
+        <p>WORDS BETWEEN TWO HEARTS</p>
+        <div class="player-container">
+      </div>
+
+      <div class="about-copy">
+        <span class="section-kicker">MORE THAN WORDS</span>
+        <h2>جیهانێک بۆ <span class="gradient-text">هەستەکان</span></h2>
+        <p>
+          M~A~MARAL شوێنێکە بۆ ئەو هەستانەی کە هەندێک جار
+          دەربڕینیان ئاسان نییە. لێرە دەتوانیت وتە بخوێنیتەوە،
+          زمانەکان بگۆڕیت، وتەی دڵخوازت هەڵبگریت و هەستەکانت
+          بە وشە دەرببڕیت.
+        </p>
+        <p class="creator">Created by <strong>Muhammad A. BaSs & Nilla Muhammad</strong></p>
+      </div>
+
+    </section>
+
+    <!-- SOCIAL MEDIA -->
+    <section class="section social-section">
+
+      <div class="section-heading">
+        <span class="section-kicker">LET'S CONNECT</span>
+        <h2>پەیوەندی <span class="gradient-text">بگرە</span></h2>
+        <p>لە ڕێگەی ئەم پلاتفۆرمانەوە پەیوەندیمان پێوە بکە.</p>
+      </div>
+
+      <div class="social-grid">
+
+        <a class="social-card" href="https://www.snapchat.com/add/kaka-adolf" target="_blank" rel="noopener noreferrer">
+          <span>👻</span><strong>Snapchat</strong><small>kaka-adolf</small>
+        </a>
+        <a class="social-card" href="https://www.snapchat.com/add/nillo-barliny" target="_blank" rel="noopener noreferrer">
+          <span>👻</span><strong>Snapchat</strong><small>nillo-barliny</small>
+        </a>
+
+        <a class="social-card" href="https://www.tiktok.com/@kaka_adolf" target="_blank" rel="noopener noreferrer">
+          <span>♪</span><strong>TikTok</strong><small>@kaka_adolf</small>
+        </a>
+
+        <a class="social-card" href="https://www.instagram.com/kak_adolf_surchi" target="_blank" rel="noopener noreferrer">
+          <span>◎</span><strong>Instagram</strong><small>kak_adolf_surchi</small>
+        </a>
+
+        <a class="social-card" href="https://www.instagram.com/chawakany_yarm" target="_blank" rel="noopener noreferrer">
+          <span>◎</span><strong>Instagram</strong><small>chawakany_yarm</small>
+        </a>
+
+        <a class="social-card" href="https://x.com/hamay_seoul" target="_blank" rel="noopener noreferrer">
+          <span>𝕏</span><strong>X / Twitter</strong><small>hamay_seoul</small>
+        </a>
+
+        <a class="social-card" href="https://t.me/kaka_maral" target="_blank" rel="noopener noreferrer">
+          <span>➤</span><strong>Telegram</strong><small>kaka_maral</small>
+        </a>
+
+        <a class="social-card" href="https://wa.me/9647508189679" target="_blank" rel="noopener noreferrer">
+          <span>☏</span><strong>WhatsApp</strong><small>0750 818 9679</small>
+        </a>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <a href="#home" class="footer-brand">Ⲙ Ɐ <span>M~A~MARAL</span></a>
+    <p>لە نێوان دوو دڵدا، هەندێک وشە بۆ هەمیشە دەمێننەوە. ♡</p>
+    <small>© <span id="year"></span> M~A~MARAL · Made with care</small>
+  </footer>
+<div class="image-center-wrapper">
+    <img src="2D8F6FB8-720A-4B37-8D95-719235F16431.png" alt="Artistic Image" class="my-image">
+</div>
+
+  <button id="backToTop" class="back-to-top" aria-label="Back to top">↑</button>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
